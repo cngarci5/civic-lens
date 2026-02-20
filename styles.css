@@ -1,10 +1,22 @@
-/* CSS by ///ADD/// YOUR NAME */
+/* CSS by Caitlin Garcia */
 
 /* Imported Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,87..112,300..900;1,18..144,87..112,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* ///ADD/// CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
 
+html, body {
+  height: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
 
 /* Root Variables */
 :root {
@@ -39,9 +51,39 @@ body.dark-mode {
 }
 
 /* ///ADD/// Skip Link Styles */
-
+#skip {
+  position: absolute;
+  top: -50px;
+  left: 1rem;
+  padding: 1rem;
+  background-color: #F1FAEE;
+  color: #1D3557;
+  text-decoration: none;
+  font-size: 10px;
+  transition: top 0.3s ease;
+  align-items: center;
+}
+#skip:focus {
+  top: 2rem;
+}
 /* ///ADD/// Navigation Styles */
+header {
+  background-color: #1D3557;
+  color: #F1FAEE;
+  font-family: var(--font-heading);
+}
 
+nav {
+  background-color: #1D3557;
+  color: #F1FAEE;
+  font-family: var(--font-body);
+}
+
+nav li {
+  background-color: #E63946;
+  color: #F1FAEE;
+  text-decoration: none;
+}
 /* ///ADD/// Global Layout Styles */
 
 /* ///ADD/// Global Text Styles */
