@@ -107,21 +107,40 @@
         <p>Receive text messages with the news you want to know.</p>
       
       <form>
-        Name
+        <label for="name">Name</label>
+<input type="text" name="name" id="name" required>
         
-        Mobile
+<label for="mobile">Mobile</label>
+<input type="tel" name="mobile" id="mobile" required>
         
-        Notification Preferences
+<fieldset>
+  <legend>
+    Notification Preferences
+  </legend>
+</fieldset>
         
-        Breaking News
-        Politics
-        Weather
-        Sports
-        Entertainment
-        World
-        Financial
+        <input type="radio" name="preferred-bn" id="preferred-bn">
+        <label for="preferred-bn">Breaking News</label>
+
+        <input type="radio" name="preferred-p" id="preferred-p">
+        <label for="preferred-p">Politics</label>
+
+        <input type="radio" name="preferred-w" id="preferred-w">
+        <label for="preferred-w">Weather</label>
         
-        Subscribe
+        <input type="radio" name="preferred-s" id="preferred-s">
+        <label for="preferred-s">Sports</label>
+        
+        <input type="radio" name="preferred-e" id="preferred-e">
+        <label for="preferred-e">Entertainment</label>
+        
+        <input type="radio" name="preferred-wrld" id="preferred-wrld">
+        <label for="preferred-wrld">World</label>
+
+        <input type="radio" name="preferred-f" id="preferred-f">
+        <label for="preferred-f">Financial</label>
+        
+        <input type="submit" name="submit" id="submit" value="Subscribe">
       </form>
     </section>
     </main>
