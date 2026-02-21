@@ -67,11 +67,13 @@ body.dark-mode {
   top: 2rem;
 }
 /* ///ADD/// Navigation Styles */
+/* ///ADD/// Global Text Styles */
+
 header {
-  display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem;
   background-color: #1D3557;
   color: #F1FAEE;
   font-family: var(--font-heading);
@@ -80,9 +82,10 @@ header {
 header h1 {
   font-size: 2.5rem;
   color: #F1FAEE;
+  margin-bottom: 0.5rem;
 }
 
-header p {
+header .tagline {
   align-items: left;
   font-size: 1;
   color: #F1FAEE;
@@ -95,56 +98,185 @@ nav {
   position: relative;
 }
 
-nav .menu {
+ .menu-button {
+  display: none;
+ }
+
+ .menu {
+
+  list-style: none;
   background-color: #E63946;
-  color: #F1FAEE;
-  text-decoration: none;
-  list-style-type: none;
-  padding: 0;
+  margin-top: 0.5rem;
+ }
+
+.menu li {
   margin: 0;
 }
 
-nav .menu li {
-  margin-right: 2rem;
-}
-
-nav .menu li a {
-  color: #F1FAEE;
-  font-size: 1rem;
-  text-decoration: none;
+.menu li a {
+  display: inline-block;
   padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
-}
-
-nav .menu li a:hover {
-  background-color: #1D3557;
-  border-radius: 2px;
-}
-
-.menu button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
   color: #F1FAEE;
+  text-decoration: none;
+  transition: var(--transition);
 }
-/* ///ADD/// Global Layout Styles */
 
-/* ///ADD/// Global Text Styles */
+.menu li a:hover {
+  background-color: #1D3557;
+}
+
+/* ///ADD/// Global Layout Styles */  /* FIX */
+main {
+  padding: 2rem;
+  max-width: 1224px; 
+  margin: auto;
+}
+section {
+  margin-bottom: 2rem;
+}
+section h2 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+h3 {
+  font-family: var(--font-heading);
+  margin: 1rem;
+}
+
+section p {
+  font-family: var(--font-body);
+}
+
+section article {
+  background-color: #F1FAEE;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: #1D3557;
+}
+
+form {
+  background-color: #E63946;
+  padding: 2rem;
+  color: #F1FAEE;
+  box-shadow: var(--shadow);
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+}
+
+form input[type="text"], form input[type="tel"] {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+fieldset {
+  margin-top: 1rem;
+}
+
+legend {
+  margin-bottom: 1rem;
+}
+
+fieldset input {
+  margin-right: 0.5rem;
+}
+
+input [type="submit"] {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #1D3557;
+  color: #F1FAEE;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+footer {
+  background-color: #1D3557;
+  color: #F1FAEE;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer h2 {
+  margin-bottom: 1rem;
+}
+
+footer p {
+  margin: 0.5rem;
+}
 
 
 /* ///ADD/// medium styles 620px */
+@media (min-width: 620px) {
 
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+  .menu li {
+    border: none;;
+  }
+
+  .menu-button {
+    display: none;
+  }
+  
+  section article {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ///ADD/// large styles 920px */
+@media (min-width: 920px) {
 
+  section article {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  form {
+    max-width: 600px;
+    margin: auto;
+  }
+}
 
 /* ///ADD/// x-large styles 1024px */
+@media (min-width: 1024px) {
 
+  main {
+    padding: 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+  
+}
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
+@media (prefers-color-scheme: dark) {
+  body {
+  background-color: #333;
+  color: #F1FAEE;
+  }
 
-
+}
+@media (prefers-color-scheme: light) {
+  body {
+  background-color: #F1FAEE;
+  color: #333;
+  }
+}
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
-
+  body {
+    display:block;
+  }
 }
