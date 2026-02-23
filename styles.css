@@ -132,29 +132,73 @@ main {
   margin: auto;
 }
 section {
+  display: block;
   margin-bottom: 2rem;
 }
 section h2 {
   font-family: var(--font-heading);
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #333;
 }
 
-h3 {
-  font-family: var(--font-heading);
-  margin: 1rem;
+.welcome {
+  max-width: 600px;
+  margin-bottom: 2rem;
 }
 
-section p {
-  font-family: var(--font-body);
+.welcome h2 {
+  font-size: 2rem;
 }
 
-section article {
-  background-color: #F1FAEE;
+.welcome p {
+  text-align: center;
+}
+
+.breaking-news {
+  display: grid;
+  gap: 1rem;
+}
+
+.breaking-news article {
+  background-color: #E63946;
+  color: #F1FAEE;
   padding: 1rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.breaking-news h3, p {
   margin-bottom: 1rem;
-  border: #1D3557;
+}
+
+.breaking-news video {
+  width: 100%;
+  display: block;
+}
+
+.featured {
+  display: grid;
+  gap: 1rem;
+}
+
+.featured article {
+  background-color: #F1FAEE;
+  color: #333;
+  padding: 1rem;
+  border: 1px solid #1D3557;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.featured h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.featured p {
+  font-family: var(--font-body);
+  line-height: 1;
 }
 
 form {
@@ -171,12 +215,13 @@ form label {
 
 form input[type="text"], form input[type="tel"] {
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   margin-top: 0.5rem;
 }
 
 fieldset {
   margin-top: 1rem;
+  border: none;
 }
 
 legend {
@@ -187,13 +232,16 @@ fieldset input {
   margin-right: 0.5rem;
 }
 
-input [type="submit"] {
+form input[type="submit"] {
   margin-top: 1rem;
-  width: 100%;
+  width: 50%;
+  padding: 1rem;
   background-color: #1D3557;
   color: #F1FAEE;
   cursor: pointer;
   transition: var(--transition);
+  border: none;
+  align-items: center;
 }
 
 footer {
