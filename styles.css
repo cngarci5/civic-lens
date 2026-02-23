@@ -167,6 +167,10 @@ section h2 {
   transition: var(--transition);
 }
 
+.breaking-news article:hover {
+  transform: translateY(-4px);
+}
+
 .breaking-news h3, p {
   margin-bottom: 1rem;
 }
@@ -188,6 +192,10 @@ section h2 {
   border: 1px solid #1D3557;
   box-shadow: var(--shadow);
   transition: var(--transition);
+}
+
+.featured article:hover {
+  transform: translateY(-4px);
 }
 
 .featured h3 {
